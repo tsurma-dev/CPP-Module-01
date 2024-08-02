@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/02 10:57:46 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/02 11:40:25 by tsurma           ###   ########.fr       */
+/*   Created: 2024/08/02 11:37:19 by tsurma            #+#    #+#             */
+/*   Updated: 2024/08/02 13:44:24 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ private:
 std::string	name;
 
 public:
-	Zombie( std::string name );
+	Zombie();
 	~Zombie();
 	void announce( void );
+	void SetName( std::string name );
 };
 
-Zombie*	newZombie( std::string name );
-void	randomChump( std::string name );
+Zombie*	zombieHorde( int N, std::string name );
 
 #endif
