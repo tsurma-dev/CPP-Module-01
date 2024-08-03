@@ -32,6 +32,10 @@
 *.app
 Zombie
 sed
+outfile
+infile
+battle
+string
 
 #VScode
 .vscode
