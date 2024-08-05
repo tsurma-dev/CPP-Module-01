@@ -6,11 +6,11 @@
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/05 15:12:14 by tsurma           ###   ########.fr        #
+#    Updated: 2024/08/05 16:22:07 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CPP = c++
+CXX = c++
 CPPFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
 NAME = harlFilter
 MAKEFLAGS = --no-print-directory
@@ -20,10 +20,10 @@ SRC = Harl.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 %.o:%.cpp
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 
 all: $(NAME)
 

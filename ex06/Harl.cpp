@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:20:58 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/05 14:39:17 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/05 16:22:29 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,22 +53,13 @@ void Harl::complain(std::string level) {
   switch (i)
   case 0: {
     this->debug();
-    this->info();
-    this->warning();
-    this->error();
-    break;
     case 1:
       this->info();
-      this->warning();
-      this->error();
-      break;
     case 2:
       this->warning();
-      this->error();
-      break;
     case 3:
       this->error();
-      break;
+	  break;
     default:
       std::cout << "Please enter valid level" << std::endl;
       break;

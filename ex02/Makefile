@@ -6,12 +6,12 @@
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/05 15:11:59 by tsurma           ###   ########.fr        #
+#    Updated: 2024/08/05 16:20:28 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CPP = c++
-CPPFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
 NAME = brain.out
 MAKEFLAGS = --no-print-directory
 
@@ -20,10 +20,7 @@ SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
-
-%.o:%.cpp
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 all: $(NAME)
 
