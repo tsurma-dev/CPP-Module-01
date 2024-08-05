@@ -6,7 +6,7 @@
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/05 14:26:45 by tsurma           ###   ########.fr        #
+#    Updated: 2024/08/05 15:12:09 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 %.o:%.cpp
-	$(CPP) $(CFLAGS) -c $< -o $@
+	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 all: $(NAME)
 
