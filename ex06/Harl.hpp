@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsurma <tsurma@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:21:00 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/03 19:21:07 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/05 11:54:41 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 #include <string>
 class Harl {
-private:
+ private:
   void debug(void);
   void info(void);
   void warning(void);
   void error(void);
 
-public:
+ public:
   Harl();
   ~Harl();
   void complain(std::string level);

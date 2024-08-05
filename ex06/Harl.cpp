@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsurma <tsurma@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:20:58 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/04 22:28:59 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/05 11:54:34 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
 #include <iostream>
 #include <ostream>
 
@@ -48,20 +49,28 @@ void Harl::complain(std::string level) {
   int i = -1;
   std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
   while (++i < 4)
-    if (level == levels[i])
-      break;
+    if (level == levels[i]) break;
   switch (i)
   case 0: {
     this->debug();
-  case 1:
     this->info();
-  case 2:
     this->warning();
-  case 3:
     this->error();
-	break;
-  default:
-    std::cout << "Please enter valid level" << std::endl;
     break;
+    case 1:
+      this->info();
+      this->warning();
+      this->error();
+      break;
+    case 2:
+      this->warning();
+      this->error();
+      break;
+    case 3:
+      this->error();
+      break;
+    default:
+      std::cout << "Please enter valid level" << std::endl;
+      break;
   }
 }
