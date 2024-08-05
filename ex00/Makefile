@@ -5,23 +5,25 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/02 10:57:52 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/02 11:31:51 by tsurma           ###   ########.fr        #
+#    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
+#    Updated: 2024/08/05 14:28:54 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
-NAME = Zombie
+NAME = zombie.out
 MAKEFLAGS = --no-print-directory
 
-SRC = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
+	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+
+%.o:%.cpp
+	$(CPP) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 

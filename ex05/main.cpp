@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsurma <tsurma@student.42berlin.de>        +#+  +:+       +#+        */
+/*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:21:25 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/03 19:21:26 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/05 14:37:12 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main(int argc, char **argv) {
   if (argc != 2) {
-    std::cout << "Only one argument please" << std::endl;
+    std::cout << "Harl is grumbling quietly" << std::endl;
     return (0);
   }
   Harl harl;

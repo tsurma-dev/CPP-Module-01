@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/02 11:37:24 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/02 16:06:24 by tsurma           ###   ########.fr        #
+#    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
+#    Updated: 2024/08/05 14:26:45 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
-NAME = sed
+NAME = sed.out
 MAKEFLAGS = --no-print-directory
 
 SRC = main.cpp
@@ -20,7 +20,10 @@ SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
+	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+
+%.o:%.cpp
+	$(CPP) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 

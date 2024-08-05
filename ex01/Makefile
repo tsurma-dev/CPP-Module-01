@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/02 11:37:24 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/02 13:54:23 by tsurma           ###   ########.fr        #
+#    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
+#    Updated: 2024/08/05 14:28:22 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
-NAME = Horde
+NAME = horde.out
 MAKEFLAGS = --no-print-directory
 
 SRC = main.cpp Zombie.cpp zombieHorde.cpp
@@ -20,7 +20,10 @@ SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
+	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+
+%.o:%.cpp
+	$(CPP) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 

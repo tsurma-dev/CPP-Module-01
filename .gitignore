@@ -30,13 +30,9 @@
 *.exe
 *.out
 *.app
-Zombie
 sed
 outfile
 infile
-battle
-string
-harl
 
 #VScode
 .vscode

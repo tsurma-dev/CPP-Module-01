@@ -6,7 +6,7 @@
 /*   By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 19:20:58 by tsurma            #+#    #+#             */
-/*   Updated: 2024/08/05 11:54:34 by tsurma           ###   ########.fr       */
+/*   Updated: 2024/08/05 14:39:17 by tsurma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 Harl::Harl(/* args */) { std::cout << "Constructor called" << std::endl; }
 
-Harl::~Harl() {}
+Harl::~Harl() { std::cout << "Destructor called" << std::endl; }
 
 void Harl::debug(void) {
   std::cout

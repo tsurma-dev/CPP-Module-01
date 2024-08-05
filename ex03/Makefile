@@ -5,22 +5,25 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/02 11:37:24 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/02 14:54:00 by tsurma           ###   ########.fr        #
+#    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
+#    Updated: 2024/08/05 14:27:34 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CXX = c++
+CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
-NAME = battle
+NAME = violence.out
 MAKEFLAGS = --no-print-directory
 
-SRC = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CPPFLAGS) -o $(NAME) $(OBJ)
+	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+
+%.o:%.cpp
+	$(CPP) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 

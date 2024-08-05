@@ -3,25 +3,27 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tsurma <tsurma@student.42berlin.de>        +#+  +:+       +#+         #
+#    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/03 19:21:31 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/04 22:29:26 by tsurma           ###   ########.fr        #
+#    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
+#    Updated: 2024/08/05 14:25:12 by tsurma           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
 NAME = harlFilter
 MAKEFLAGS = --no-print-directory
 
-SRC = main.cpp Harl.cpp
+SRC = Harl.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
+	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+
+%.o:%.cpp
+	$(CPP) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
