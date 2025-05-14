@@ -1,17 +1,5 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: tsurma <tsurma@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/31 11:58:26 by tsurma            #+#    #+#              #
-#    Updated: 2024/08/05 16:19:10 by tsurma           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -g3 -std=c++98
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = zombie.out
 MAKEFLAGS = --no-print-directory
 
